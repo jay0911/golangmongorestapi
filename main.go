@@ -179,7 +179,7 @@ func main() {
 	fmt.Println("hello world")
 
 	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
-	clientOptions := options.Client().ApplyURI("mongodb://mongo-service:27016")
+	clientOptions := options.Client().ApplyURI("mongodb://mongo-service:27017")
 	client, _ = mongo.Connect(ctx, clientOptions)
 
 	r := mux.NewRouter()
